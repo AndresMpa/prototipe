@@ -103,6 +103,4 @@ router.beforeEach((to, from) => {
   }
 });
 
-//router.push({ name: 'user'})
-
 export default router;
