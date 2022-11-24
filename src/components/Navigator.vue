@@ -1,15 +1,19 @@
 <template>
   <v-list nav dense>
-    <div v-for="(path, index) in routes" :key="index">
-      <v-list-item :to="{ name: path.to }">
-        <v-list-item-action>
+    <v-list-item-group
+      v-for="(path, index) in routes"
+      :key="index"
+      color="primary"
+      mandatory
+    >
+      <v-list-item :to="path.to">
+        <template v-slot:prepend>
           <v-icon :icon="path.icon"></v-icon>
-        </v-list-item-action>
-        <v-list-item-content>
-          <v-list-item-title> {{ path.name }} </v-list-item-title>
-        </v-list-item-content>
+        </template>
+
+        <v-list-item-title v-text="path.name" />
       </v-list-item>
-    </div>
+    </v-list-item-group>
   </v-list>
 </template>
 
@@ -21,4 +25,9 @@ export default {
   },
 };
 </script>
-<style lang="css"></style>
+<style lang="css">
+.list-route {
+  padding: 0%;
+  margin: 0%;
+}
+</style>
