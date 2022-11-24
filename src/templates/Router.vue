@@ -17,19 +17,19 @@ export default {
       icon: "mdi-account",
       path: [
         {
-          to: "Achievements",
+          to: "/achievements",
           icon: "mdi-manjaro",
           name: "Logros e insignias",
         },
         {
-          to: "Progress",
           icon: "mdi-plus-box-multiple",
           name: "Estadisticas y progreso",
+          to: "/progress",
         },
         {
-          to: "Patients",
           icon: "mdi-newspaper",
           name: "Pacientes",
+          to: "/patients",
         },
       ],
     },

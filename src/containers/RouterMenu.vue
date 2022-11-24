@@ -1,21 +1,34 @@
 <template>
-  <v-menu transition="slide-x-transition" right>
-    <template v-slot:activator="{ on, attrs }">
-      <v-btn icon v-bind="attrs" v-on="on" dark>
-        <v-icon> {{ menu.icon }} </v-icon>
-      </v-btn>
-    </template>
+  <container>
+    <v-list>
+      <v-list-item
+        :prepend-avatar="user.avatar"
+        :title="user.username"
+        :subtitle="user.mail"
+      ></v-list-item>
+    </v-list>
+
+    <v-divider></v-divider>
+
     <Navigator :routes="menu.path" />
-  </v-menu>
+  </container>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 import Navigator from "@components/Navigator.vue";
+
 export default {
   name: "RouterMenu",
   components: { Navigator },
   props: {
     menu: Object,
+  },
+  computed: {
+    ...mapGetters("user", {
+      user: "getUserData",
+    }),
   },
 };
 </script>

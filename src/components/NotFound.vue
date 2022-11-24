@@ -22,7 +22,7 @@
             variant="flat"
             size="x-large"
           >
-            <v-icon icon="mdi-speedometer" size="large" start />
+            <v-icon icon="mdi-home" size="large" start />
 
             Regresar
           </v-btn>
@@ -39,7 +39,11 @@ export default {
       if (this.$router.options.history.state.back) {
         this.$router.go(-1);
       } else {
-        this.$router.push({ name: "Home" });
+        if (this.$store.state.auth.isLoggedIn) {
+          this.$router.push({ name: "Home" });
+        } else {
+          this.$router.push({ name: "Login" });
+        }
       }
     },
   },
