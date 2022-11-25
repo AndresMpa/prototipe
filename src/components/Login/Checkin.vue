@@ -69,7 +69,7 @@ export default {
         avatar: "https://cdn.vuetifyjs.com/images/john.jpg",
         name: "Sebastian+Sabritas",
       })
-      this.$router.push({ name: "Home" });
+      this.$router.push({ name: "Recent" });
     },
   },
 };

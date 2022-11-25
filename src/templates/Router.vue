@@ -17,7 +17,7 @@ export default {
       icon: "mdi-account",
       path: [
         {
-          to: "/",
+          to: "/recent",
           icon: "mdi-home",
           name: "Resumen",
         },
@@ -31,11 +31,13 @@ export default {
           name: "Estadisticas y progreso",
           to: "/progress",
         },
+        /*
         {
           icon: "mdi-newspaper",
           name: "Pacientes",
           to: "/patients",
         },
+        */
       ],
     },
   }),
