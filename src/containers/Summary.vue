@@ -7,7 +7,7 @@
           color="grey-lighten-3"
           height="420"
         >
-          <Stats />
+          <BarChart />
         </v-sheet>
       </v-col>
 
@@ -86,13 +86,13 @@
 
 <script>
 import History from "@components/Activities/History.vue";
-import Stats from "@components/Achievements/Stats.vue";
+import BarChart from "@components/Stats/BarChart.vue";
 
 export default {
-  name: "Home",
+  name: "Summary",
   components: {
+    BarChart,
     History,
-    Stats,
   },
 };
 </script>
