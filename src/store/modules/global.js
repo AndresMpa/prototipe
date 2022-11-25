@@ -1,7 +1,7 @@
 const global = {
   namespaced: true,
   state: () => ({
-    drawer: true,
+    drawer: false,
   }),
   mutations: {
     toggle(state) {
