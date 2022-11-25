@@ -17,6 +17,11 @@ export default {
       icon: "mdi-account",
       path: [
         {
+          to: "/",
+          icon: "mdi-home",
+          name: "Resumen",
+        },
+        {
           to: "/achievements",
           icon: "mdi-manjaro",
           name: "Logros e insignias",
