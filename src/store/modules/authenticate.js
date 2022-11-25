@@ -3,8 +3,16 @@ const authenticate = {
   state: () => ({
     session: true,
   }),
-  mutations: {},
-  actions: {},
+  mutations: {
+    logUser(state, status) {
+      state.session = status;
+    },
+  },
+  actions: {
+    setSession({ commit }, session) {
+      commit("logUser", session);
+    },
+  },
   getters: {
     isLoggedIn(state) {
       return state.session;
