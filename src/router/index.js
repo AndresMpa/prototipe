@@ -6,7 +6,7 @@ import {
 } from "vue-router";
 import store from "@store/index.js";
 
-import Home from "@pages/Home";
+import Home from "@pages/Home.vue";
 
 const routes = [
   {
@@ -16,22 +16,28 @@ const routes = [
     meta: { requiresAuth: true, transition: "slide-left" },
     children: [
       {
+        name: "Recent",
+        path: "/recent",
+        meta: { requiresAuth: true, transition: "slide-left" },
+        component: () => import("@pages/Recent.vue"),
+      },
+      {
         name: "Achievements",
         path: "/achievements",
         meta: { requiresAuth: true, transition: "slide-left" },
-        component: () => import(/* webpackChunkName: "Home" */ "@pages/Achievements"),
+        component: () => import("@pages/Achievements.vue"),
       },
       {
         name: "Progress",
         path: "/progress",
         meta: { requiresAuth: true, transition: "slide-left" },
-        component: () => import(/* webpackChunkName: "Home" */ "@pages/Progress"),
+        component: () => import("@pages/Progress.vue"),
       },
       {
         name: "Patients",
         path: "/patients",
         meta: { requiresAuth: true, transition: "slide-left" },
-        component: () => import(/* webpackChunkName: "Home" */ "@pages/Patients"),
+        component: () => import("@pages/Patients.vue"),
       },
     ],
   },
@@ -39,25 +45,25 @@ const routes = [
     name: "Login",
     path: "/login",
     meta: { requiresAuth: false, transition: "slide-left" },
-    component: () => import(/* webpackChunkName: "Home" */ "@pages/Login"),
+    component: () => import("@pages/Login"),
     children: [
       {
         name: "Logout",
         path: "/logout",
         meta: { requiresAuth: false, transition: "slide-left" },
-        component: () => import(/* webpackChunkName: "Home" */ "@pages/Logout"),
+        component: () => import("@pages/Logout"),
       },
       {
         name: "Recovery",
         path: "/recovery",
         meta: { requiresAuth: false, transition: "slide-left" },
-        component: () => import(/* webpackChunkName: "Home" */ "@pages/Recovery"),
+        component: () => import("@pages/Recovery"),
       },
       {
         name: "Create",
         path: "/create-account",
         meta: { requiresAuth: false, transition: "slide-left" },
-        component: () => import(/* webpackChunkName: "Home" */ "@pages/Create"),
+        component: () => import("@pages/Create"),
       },
     ],
   },
@@ -65,19 +71,19 @@ const routes = [
     name: "Landing",
     path: "/landing",
     meta: { requiresAuth: false, transition: "slide-left" },
-    component: () => import(/* webpackChunkName: "Home" */ "@pages/Home"),
+    component: () => import("@pages/Home"),
     children: [
       {
         name: "Purchase",
         path: "/purchase",
         meta: { requiresAuth: false, transition: "slide-left" },
-        component: () => import(/* webpackChunkName: "Home" */ "@pages/Home"),
+        component: () => import("@pages/Home"),
       },
       {
         name: "Bill",
         path: "/bill",
         meta: { requiresAuth: false, transition: "slide-left" },
-        component: () => import(/* webpackChunkName: "Home" */ "@pages/Home"),
+        component: () => import("@pages/Home"),
       },
     ],
   },
@@ -85,7 +91,7 @@ const routes = [
     name: "NotFound",
     path: "/:pathMatch(.*)*",
     meta: { requiresAuth: false, transition: "slide-left" },
-    component: () => import(/* webpackChunkName: "Home" */ "@pages/NotFound"),
+    component: () => import("@pages/NotFound"),
   },
 ];
 
@@ -102,7 +108,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
- /* if (to.meta.requiresAuth && !store.state.auth.isLoggedIn) {*/
+/*  if (to.meta.requiresAuth && !store.state.auth.isLoggedIn) {*/
     /*return {*/
       /*path: "/login",*/
     /*};*/
