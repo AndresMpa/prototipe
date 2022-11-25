@@ -4,10 +4,10 @@ Prototype instructions, running npm using at least node v18.0.0+
 
 ## MVP to do list
 
-- [X] Structure
+- [x] Structure
 - [ ] Activities
 - [ ] Achievements
-- [ ] Login
+- [x] Login
 - [ ] Appointment
 
 ## Project setup
