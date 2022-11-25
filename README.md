@@ -6,9 +6,9 @@ Prototype instructions, running npm using at least node v18.0.0+
 
 - [x] Structure
 - [ ] Activities
-- [ ] Achievements
+- [x] Achievements
 - [x] Login
-- [ ] Appointment
+- [ ] Deployment
 
 ## Project setup
 
