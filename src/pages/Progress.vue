@@ -1,16 +1,16 @@
 <template>
   <div>
-    <Stats />
+    <PatientProgress />
   </div>
 </template>
 
 <script>
-import Stats from "@components/Achievements/Stats.vue";
+import PatientProgress from "@containers/PatientProgress.vue";
 
 export default {
   name: "Progress",
   components: {
-    Stats,
+    PatientProgress,
   },
 };
 </script>

@@ -1,21 +1,11 @@
 <template>
   <v-timeline side="end" align="start">
-    <v-timeline-item dot-color="pink" size="small">
-      <div class="d-flex">
-        <strong class="mr-4">5pm</strong>
-        <div>
-          <strong>New Icon</strong>
-          <div class="text-caption">Mobile App</div>
-        </div>
-      </div>
-    </v-timeline-item>
-
     <v-timeline-item dot-color="teal-lighten-3" size="small">
       <div class="d-flex">
-        <strong class="mr-4">3-4pm</strong>
+        <strong class="mr-4">9-11am</strong>
         <div>
-          <strong>Design Stand Up</strong>
-          <div class="text-caption mb-2">Hangouts</div>
+          <strong>Seguir con el MVP</strong>
+          <div class="text-caption">Insights</div>
         </div>
       </div>
     </v-timeline-item>
@@ -24,17 +14,27 @@
       <div class="d-flex">
         <strong class="mr-4">12pm</strong>
         <div>
-          <strong>Lunch break</strong>
+          <strong>Pausa para comer</strong>
         </div>
       </div>
     </v-timeline-item>
 
     <v-timeline-item dot-color="teal-lighten-3" size="small">
       <div class="d-flex">
-        <strong class="mr-4">9-11am</strong>
+        <strong class="mr-4">3-4pm</strong>
         <div>
-          <strong>Finish Home Screen</strong>
-          <div class="text-caption">Web App</div>
+          <strong>Reunión con Marcus</strong>
+          <div class="text-caption mb-2">Meet: https://meet.google.com/avr-amgt-gkp</div>
+        </div>
+      </div>
+    </v-timeline-item>
+
+    <v-timeline-item dot-color="pink" size="small">
+      <div class="d-flex">
+        <strong class="mr-4">4:15pm - 2am</strong>
+        <div>
+          <strong>Seguir con el MVP</strong>
+          <div class="text-caption">Insights</div>
         </div>
       </div>
     </v-timeline-item>

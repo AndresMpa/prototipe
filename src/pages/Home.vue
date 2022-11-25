@@ -16,5 +16,8 @@ export default {
     Router,
     Bar,
   },
+  mounted() {
+    this.$router.push({ name: "Recent" });
+  },
 };
 </script>
