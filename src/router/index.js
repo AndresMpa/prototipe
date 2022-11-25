@@ -91,7 +91,7 @@ const routes = [
     name: "NotFound",
     path: "/:pathMatch(.*)*",
     meta: { requiresAuth: false, transition: "slide-left" },
-    component: () => import("@pages/NotFound"),
+    component: () => import("@components/NotFound"),
   },
 ];
 
