@@ -1,5 +1,5 @@
 <template>
-  <v-menu transition="slide-x-transition">
+  <v-menu transition="slide-x-transition" class="rounded-tr-0">
     <template v-slot:activator="{ props }">
       <v-btn icon v-bind="props" dark>
         <v-icon> {{ menu.icon }} </v-icon>
