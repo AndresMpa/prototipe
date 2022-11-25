@@ -1,17 +1,17 @@
 <template>
   <div class="ma-2 rounded-lg">
-    <Bar :chart-options="chartOptions" :chart-data="chartData" />
+    <Pie :chart-options="chartOptions" :chart-data="chartData" />
   </div>
 </template>
 
 <script>
-import { Bar } from "vue-chartjs";
+import { Pie } from "vue-chartjs";
 import {
   Chart as ChartJS,
   Title,
   Legend,
   Tooltip,
-  BarElement,
+  ArcElement,
   LinearScale,
   CategoryScale,
 } from "chart.js";
@@ -20,22 +20,27 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  BarElement,
+  ArcElement,
   CategoryScale,
   LinearScale
 );
 
 export default {
-  name: "Stats",
+  name: "PieChart",
   data() {
     return {
       chartData: {
-        labels: ["January", "February", "March"],
+        labels: [
+          "Hacer ejercicio",
+          "Salir con Pedro",
+          "Leer en el parque",
+          "Ir al cine",
+        ],
         datasets: [
           {
-            label: "Progreso del mes",
-            backgroundColor: "#78f",
-            data: [23, 20, 25],
+            label: "Actividades realizadas",
+            backgroundColor: ["#41B883", "#E46651", "#00D8FF", "#DD1B16"],
+            data: [23, 20, 25, 2],
           },
         ],
       },
@@ -45,7 +50,7 @@ export default {
       },
     };
   },
-  components: { Bar },
+  components: { Pie },
 };
 </script>
 
