@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Review from "@containers/Review.vue";
+import Review from "@templates/Review.vue";
 
 export default {
   name: "Progress",
