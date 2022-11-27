@@ -30,8 +30,8 @@ export default {
     },
     logo() {
       return this.$vuetify.theme.current.dark
-        ? "src/assets/logo_white.svg"
-        : "src/assets/logo.svg";
+        ? "https://raw.githubusercontent.com/AndresMpa/prototype/main/src/assets/logo_white.svg"
+        : "https://raw.githubusercontent.com/AndresMpa/prototype/main/src/assets/logo.svg";
     },
   },
 };
