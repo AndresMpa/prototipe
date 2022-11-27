@@ -4,7 +4,7 @@
       <v-sheet height="100%">
         <picture class="d-flex fill-height justify-center align-center">
           <source srcset="../../assets/logo_color.svg" />
-          <img src="../../assets/logo_color.svg" />
+          <img src="../../assets/logo_color.svg" class="h-75" />
           <v-divider vertical class="ma-5 w-25 h-75"></v-divider>
           <div class="text-h2">
             {{ slide }}
