@@ -1,10 +1,11 @@
 <template>
-  <v-navigation-drawer v-model="drawer">
+  <v-navigation-drawer v-model="drawer" @click="toggle" temporary>
     <RouterMenu :menu="menu" />
   </v-navigation-drawer>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 import { mapGetters } from "vuex";
 
 import RouterMenu from "@containers/RouterMenu.vue";
@@ -41,6 +42,11 @@ export default {
       ],
     },
   }),
+  methods: {
+    ...mapActions("global", {
+      toggle: "toggleDrawer",
+    }),
+  },
   computed: {
     ...mapGetters("global", {
       drawer: "getDrawer",
