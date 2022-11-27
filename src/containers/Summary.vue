@@ -3,13 +3,17 @@
     <v-row no-gutters>
       <v-col class="d-flex" cols="12" md="4" sm="12">
         <v-sheet
-          class="d-flex rounded stats justify-center"
+          class="d-flex mx-auto rounded stats justify-center"
           color="grey-lighten-3"
           height="420"
         >
           <BarChart />
         </v-sheet>
       </v-col>
+
+      <v-divider
+        class="d-xl-none d-lg-none d-md-none d-sm-block d-xm-block my-6"
+      ></v-divider>
 
       <v-col class="d-flex" cols="12" md="4" sm="12">
         <v-row>
@@ -70,6 +74,10 @@
           </v-col>
         </v-row>
       </v-col>
+
+      <v-divider
+        class="d-xl-none d-lg-none d-md-none d-sm-block d-xm-block my-6"
+      ></v-divider>
 
       <v-col cols="12" md="4" sm="12">
         <v-sheet

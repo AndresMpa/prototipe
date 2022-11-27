@@ -1,37 +1,20 @@
 <template>
   <v-container fluid>
+    <Stats />
     <v-row no-gutters>
       <v-col class="d-flex" cols="12" md="12" sm="12">
-        <v-sheet
-          class="d-flex rounded w-100 mb-5 justify-center"
-          color="grey-lighten-3"
-          height="420"
-        >
-          <v-col class="d-flex" cols="12" md="4" sm="12">
-            <BarChart />
-          </v-col>
-          <v-col class="d-flex" cols="12" md="4" sm="12">
-            <PieChart />
-          </v-col>
-          <v-col class="d-flex" cols="12" md="4" sm="12">
-            <LineChart />
-          </v-col>
-        </v-sheet>
-      </v-col>
-
-      <v-col class="d-flex" cols="12" md="12" sm="12">
         <v-row>
-          <v-col cols="4">
+          <v-col cols="12" md="4" sm="12">
             <v-sheet
               class="d-flex mx-5 rounded overflow-auto"
+              height-max="420"
               color="white"
-              height="420"
             >
               <History />
             </v-sheet>
           </v-col>
-          <v-col cols="4">
-            <v-sheet class="d-flex rounded overflow-auto" height="420">
+          <v-col cols="12" md="4" sm="12">
+            <v-sheet class="d-flex rounded overflow-auto" height-max="420">
               <v-card
                 class="w-100"
                 title="Dr. Marcus Obrien"
@@ -49,11 +32,11 @@
             </v-sheet>
           </v-col>
 
-          <v-col cols="4">
+          <v-col cols="12" md="4" sm="12">
             <v-sheet
               class="d-flex rounded overflow-auto"
               color="secondary"
-              height="420"
+              height-max="420"
             >
               <v-card
                 class="w-100"
@@ -107,17 +90,12 @@
 
 <script>
 import History from "@components/Activities/History.vue";
-import LineChart from "@components/Stats/LineChart.vue";
-import PieChart from "@components/Stats/PieChart.vue";
-import BarChart from "@components/Stats/BarChart.vue";
-
+import Stats from "@components/Activities/Stats.vue";
 export default {
   name: "PatientProgress",
   components: {
-    LineChart,
-    BarChart,
-    PieChart,
     History,
+    Stats,
   },
 };
 </script>

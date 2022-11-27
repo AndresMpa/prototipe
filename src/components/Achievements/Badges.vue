@@ -1,5 +1,12 @@
 <template>
-  <v-card :title="badge.name" :subtitle="badge.description" height="250px" width="300px">
+  <v-card height="280px" width="320px">
+    <v-card-title>
+      {{ badge.name }}
+    </v-card-title>
+    <v-card-text>
+      {{ badge.description }}
+    </v-card-text>
+    <v-divider class="mb-auto"></v-divider>
     <v-img :lazy-src="badge.img" :src="badge.img" aspect-ratio="1" cover>
       <template v-slot:placeholder>
         <v-row class="fill-height ma-0" align="center" justify="center">
