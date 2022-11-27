@@ -23,8 +23,11 @@ export default createVuetify({
     },
   },
   theme: {
-    dark: true,
+    dark: false,
     themes: {
+      options: {
+        customProperties: true,
+      },
       light: {
         primary: "#1E1E1E",
         main: "#1E88E5",
