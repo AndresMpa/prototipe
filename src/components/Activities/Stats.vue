@@ -1,30 +1,34 @@
 <template>
-  <v-carousel
-    hide-delimiter-background
-    show-arrows="hover"
-    hide-delimiters
-    class="mb-5"
-    height="420"
-    cycle
-  >
-    <v-carousel-item>
-      <v-sheet class="d-flex rounded w-100 mb-5 justify-center" height="420">
-        <BarChart />
-      </v-sheet>
-    </v-carousel-item>
-
-    <v-carousel-item>
-      <v-sheet class="d-flex rounded w-100 mb-5 justify-center" height="420">
-        <PieChart />
-      </v-sheet>
-    </v-carousel-item>
-
-    <v-carousel-item>
-      <v-sheet class="d-flex rounded w-100 mb-5 justify-center" height="420">
-        <LineChart />
-      </v-sheet>
-    </v-carousel-item>
-  </v-carousel>
+  <v-row class="mb-6 mx-auto">
+    <v-col class="d-flex" cols="12">
+      <v-row>
+        <v-col class="mx-auto" cols="12" lg="4" md="6" sm="12">
+          <v-sheet
+            class="d-flex rounded w-100 mx-2 justify-center"
+            height="420"
+          >
+            <BarChart />
+          </v-sheet>
+        </v-col>
+        <v-col class="mx-auto" cols="12" lg="4" md="6" sm="12">
+          <v-sheet
+            class="d-flex rounded w-100 mx-2 justify-center"
+            height="420"
+          >
+            <PieChart />
+          </v-sheet>
+        </v-col>
+        <v-col class="mx-auto" cols="12" lg="4" md="8" sm="12">
+          <v-sheet
+            class="d-flex rounded w-100 mx-2 justify-center"
+            height="420"
+          >
+            <LineChart />
+          </v-sheet>
+        </v-col>
+      </v-row>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

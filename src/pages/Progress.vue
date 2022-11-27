@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <PatientProgress />
-  </div>
+  <Review />
 </template>
 
 <script>
-import PatientProgress from "@containers/PatientProgress.vue";
+import Review from "@containers/Review.vue";
 
 export default {
   name: "Progress",
   components: {
-    PatientProgress,
+    Review,
   },
 };
 </script>
