@@ -1,7 +1,7 @@
 <template>
   <v-container class="fill-height">
     <v-responsive class="d-flex align-center text-center fill-height">
-      <v-img contain height="300" src="src/assets/logo.svg" />
+      <v-img contain height="300" :lazy-src="logo" :src="logo" />
 
       <div class="text-body-2 font-weight-light mb-n1">
         Ups... Pagina no encontada
@@ -18,12 +18,10 @@
             @click="takeBack"
             target="_blank"
             min-width="228"
-            color="primary"
             variant="flat"
             size="x-large"
           >
             <v-icon icon="mdi-home" size="large" start />
-
             Regresar
           </v-btn>
         </v-col>
@@ -45,6 +43,13 @@ export default {
           this.$router.push({ name: "Login" });
         }
       }
+    },
+  },
+  computed: {
+    logo() {
+      return this.$vuetify.theme.current.dark
+        ? "src/assets/logo_white.svg"
+        : "src/assets/logo.svg";
     },
   },
 };

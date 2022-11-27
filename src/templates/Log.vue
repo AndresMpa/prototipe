@@ -1,19 +1,17 @@
 <template>
-  <v-container class="fill-height mt-16">
+  <v-container class="fill-height">
     <v-row
       class="d-flex justify-center align-center"
       justify="space-around"
       color="primary"
     >
-      <v-img
-        lazy-src="src/assets/logo.svg"
-        src="src/assets/logo.svg"
-        aspect-ratio="1"
-        width="150"
-        cover
-      ></v-img>
+      <v-col cols="12" lg="6" md="2" sm="2" xs="2">
+        <v-img :lazy-src="logo" :src="logo" aspect-ratio="1" cover></v-img>
+      </v-col>
 
-      <Form :content="currentRouteName" />
+      <v-col cols="12" lg="6" md="12" sm="12" xs="12">
+        <Form :content="currentRouteName" />
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -29,6 +27,11 @@ export default {
   computed: {
     currentRouteName() {
       return this.$route.name;
+    },
+    logo() {
+      return this.$vuetify.theme.current.dark
+        ? "src/assets/logo_white.svg"
+        : "src/assets/logo.svg";
     },
   },
 };

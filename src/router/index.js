@@ -108,11 +108,11 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-/*  if (to.meta.requiresAuth && !store.state.auth.isLoggedIn) {*/
-    /*return {*/
-      /*path: "/login",*/
-    /*};*/
-  /*}*/
+  if (to.meta.requiresAuth && !store.state.auth.session) {
+    return {
+      path: "/login",
+    };
+  }
 });
 
 export default router;

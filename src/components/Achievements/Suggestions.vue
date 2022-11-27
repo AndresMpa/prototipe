@@ -3,7 +3,7 @@
     <v-carousel-item v-for="(slide, index) in slides" :key="index">
       <v-sheet height="100%">
         <picture class="d-flex fill-height justify-center align-center">
-          <source srcset="../../assets/logo.png" />
+          <source :srcset="logo" />
           <img src="../../assets/logo_color.svg" />
           <v-divider vertical class="ma-5 w-25 h-75"></v-divider>
           <div class="text-h2">
@@ -28,6 +28,13 @@ export default {
         "Salir con amigos",
       ],
     };
+  },
+  computed: {
+    logo() {
+      return this.$vuetify.theme.current.dark
+        ? "src/assets/logo_white.svg"
+        : "src/assets/logo.svg";
+    },
   },
 };
 </script>

@@ -11,8 +11,8 @@
           </v-avatar>
           <v-list-item title="Dr. Marcus Obrien" subtitle="Estado: En linea">
             <v-card-actions class="mt-14">
-              <v-btn color="primary" variant="text"> Solicitar cita </v-btn>
-              <v-btn> Contactar </v-btn>
+              <v-btn color="primary" variant="text">Solicitar</v-btn>
+              <v-btn>Contactar</v-btn>
             </v-card-actions>
           </v-list-item>
         </div>

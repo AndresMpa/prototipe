@@ -14,7 +14,7 @@ export default {
     intro: {
       unlocked: {
         title: "Logros obtenidos",
-        hint: "Estos son los logros que tienes, esfuerzate por tenerlos todos",
+        hint: "Estos son los logros que tienes, ¡Consiguelos todos!",
       },
       locked: {
         title: "Lista de logros",
