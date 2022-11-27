@@ -8,7 +8,6 @@
             <v-sheet
               class="d-flex mx-5 rounded overflow-auto"
               height-max="420"
-              color="white"
             >
               <History />
             </v-sheet>
