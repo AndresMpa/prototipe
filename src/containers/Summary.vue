@@ -4,7 +4,6 @@
       <v-col class="d-flex" cols="12" md="4" sm="12">
         <v-sheet
           class="d-flex mx-auto rounded stats justify-center"
-          color="grey-lighten-3"
           height="420"
         >
           <BarChart />
@@ -82,7 +81,6 @@
       <v-col cols="12" md="4" sm="12">
         <v-sheet
           class="d-flex mx-5 rounded overflow-auto"
-          color="white"
           height="420"
         >
           <History />

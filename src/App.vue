@@ -21,8 +21,8 @@ export default {
   background: linear-gradient(to rigth, #050872, #070335);
 }
 .v-theme--light.v-application {
-  background: #74ebd5;
-  background: -webkit-linear-gradient(to rigth, #acb6e5, #74ebd5);
-  background: linear-gradient(to rigth, #acb6e5, #74ebd5);
+  background: #1e86e7;
+  background: -webkit-linear-gradient(to rigth, #00d4ff, #1e86e7);
+  background: linear-gradient(to rigth, #00d4ff, #1e86e7);
 }
 </style>
