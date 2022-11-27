@@ -45,31 +45,7 @@
           </v-col>
 
           <v-col cols="12">
-            <v-sheet class="d-flex rounded" height="150">
-              <v-card class="w-100">
-                <div height="100%">
-                  <div class="d-flex overflow-auto flex-row align-start">
-                    <v-avatar color="grey" size="150" rounded="0">
-                      <v-img
-                        cover
-                        src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
-                      ></v-img>
-                    </v-avatar>
-                    <v-list-item
-                      title="Dr. Marcus Obrien"
-                      subtitle="Estado: En linea"
-                    >
-                      <v-card-actions class="mt-14">
-                        <v-btn color="primary" variant="text">
-                          Solicitar cita
-                        </v-btn>
-                        <v-btn> Contactar </v-btn>
-                      </v-card-actions>
-                    </v-list-item>
-                  </div>
-                </div>
-              </v-card>
-            </v-sheet>
+            <Contact />
           </v-col>
         </v-row>
       </v-col>
@@ -79,10 +55,7 @@
       ></v-divider>
 
       <v-col cols="12" md="4" sm="12">
-        <v-sheet
-          class="d-flex mx-5 rounded overflow-auto"
-          height="420"
-        >
+        <v-sheet class="d-flex mx-5 rounded overflow-auto" height="420">
           <History />
         </v-sheet>
       </v-col>
@@ -93,12 +66,14 @@
 <script>
 import History from "@components/Activities/History.vue";
 import BarChart from "@components/Stats/BarChart.vue";
+import Contact from "@components/Contact.vue";
 
 export default {
   name: "Summary",
   components: {
     BarChart,
     History,
+    Contact,
   },
 };
 </script>
